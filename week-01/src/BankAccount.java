@@ -39,4 +39,9 @@ public class BankAccount {
         else
             System.out.println("invalid or insufficient withdraw amount");
     }
+
+    public void displayAccountDetails(){
+        System.out.println("Account Number is : " + accountNumber);
+        System.out.println("Balance is : " + balance);
+    }
 }

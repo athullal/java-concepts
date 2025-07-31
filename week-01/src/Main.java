@@ -2,19 +2,22 @@ public class Main {
     public static void main(String[] args){
 
         BankAccount myAccount = new BankAccount("ATH001",5000);
-        System.out.println(myAccount.getBalance());
+        myAccount.displayAccountDetails();
 
         myAccount.deposit(1000);
-        System.out.println(myAccount.getBalance());
+        myAccount.displayAccountDetails();
 
         myAccount.withdraw(3000);
-        System.out.println(myAccount.getBalance());
+        myAccount.displayAccountDetails();
 
         myAccount.withdraw(10000);
-        System.out.println(myAccount.getBalance());
+        myAccount.displayAccountDetails();
 
         myAccount.deposit(-500);
-        System.out.println(myAccount.getBalance());
+        myAccount.displayAccountDetails();
+
+        myAccount.setBalance(1000);
+        myAccount.displayAccountDetails();
 
     }
 }
