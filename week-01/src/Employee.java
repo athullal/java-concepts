@@ -20,4 +20,8 @@ public class Employee {
     public double getBaseSalary() {
         return baseSalary;
     }
+
+    public String getName() {
+        return name;
+    }
 }

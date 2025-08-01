@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args){
 
@@ -30,5 +33,32 @@ public class Main {
             employee.displayInfo();
         }
 
+        calculateSalaryExpenseOfTeam(team);
+        sortEmployeesBasedOnSalary(team);
+
+    }
+
+    private static void sortEmployeesBasedOnSalary(Employee[] team) {
+
+        List<Employee> team1 = new ArrayList<>();
+
+        for (Employee e:team){
+            team1.add(e);
+        }
+
+        team1.sort((e1,e2) -> Double.compare(e1.calculateSalary(), e2.calculateSalary()));
+
+        for (Employee e:team1){
+            System.out.println(e.getName() + e.getBaseSalary());
+        }
+
+    }
+
+    public static void calculateSalaryExpenseOfTeam(Employee[] team){
+        double totalSalaryExpense = 0;
+        for (Employee employee:team){
+            totalSalaryExpense=totalSalaryExpense+employee.calculateSalary();
+        }
+        System.out.println("Total salary expense for the team is :" + totalSalaryExpense);
     }
 }
